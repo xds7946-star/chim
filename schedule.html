@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Розклад - Студія йоги «Баланс»</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> <!-- підключення іконок для сучасних браузерів -->
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> <!-- підключення іконок для старих браузерів -->
+</head>
+<body>
+
+<header>
+    <nav class="nav"> <!-- навігаційне меню -->
+        <a href="index.html"><ion-icon name="home-outline"></ion-icon> Головна</a>
+        <a href="about.html"><ion-icon name="color-filter-outline"></ion-icon>Про студію</a>
+        <a href="classes.html"><ion-icon name="accessibility-outline"></ion-icon> Заняття</a>
+        <a href="schedule.html" class="active"><ion-icon name="bar-chart-outline"></ion-icon> Розклад</a>
+        <a href="instructors.html"><ion-icon name="person-circle-outline"></ion-icon> Інструктори</a>
+        <a href="contacts.html"><ion-icon name="at-outline"></ion-icon> Контакти</a>
+    </nav>
+</header>
+
+<section class="schedule-hero">
+    <div class="schedule-hero__content">
+        <p class="schedule-hero__eyebrow">Розклад</p>
+        <h1>Час для практики у вашому ритмі</h1>
+        <p>Обирайте зручні слоти — ранкові, денні або вечірні заняття. Ми допоможемо підібрати оптимальний графік.</p>
+        <div class="schedule-hero__actions">
+            <a href="classes.html" class="btn primary"><ion-icon name="accessibility-outline"></ion-icon> Переглянути заняття</a>
+            <a href="contacts.html" class="btn ghost"><ion-icon name="chatbubble-outline"></ion-icon> Поставити питання</a>
+        </div>
+    </div>
+</section>
+
+<div class="container"> <!-- основний контейнер вмісту сторінки -->
+    <div class="schedule-highlights">
+        <div class="schedule-card">
+            <ion-icon name="sunny-outline"></ion-icon>
+            <h3>Ранкові практики</h3>
+            <p>Почніть день з енергії та спокою.</p>
+        </div>
+        <div class="schedule-card">
+            <ion-icon name="partly-sunny-outline"></ion-icon>
+            <h3>Денні сесії</h3>
+            <p>Зручні короткі перерви для перезавантаження.</p>
+        </div>
+        <div class="schedule-card">
+            <ion-icon name="moon-outline"></ion-icon>
+            <h3>Вечірня йога</h3>
+            <p>Розслаблення після робочого дня.</p>
+        </div>
+    </div>
+
+    <h2>Розклад роботи</h2>
+    <div class="schedule-wrapper">
+        <table class="schedule-table"> <!-- таблиця розкладу -->
+            <tr> <!-- заголовок таблиці -->
+                <th>День</th>
+                <th>Час</th>
+            </tr>
+            <tr> <!-- рядок таблиці -->
+                <td>Понеділок - П’ятниця</td>
+                <td>08:00 - 20:00</td>
+            </tr>
+            <tr> <!-- рядок таблиці -->
+                <td>Субота</td>
+                <td>10:00 - 16:00</td>
+            </tr>
+            <tr> <!-- рядок таблиці -->
+                <td>Неділя</td>
+                <td>Вихідний</td>
+            </tr>
+        </table>
+    </div>
+    <p class="schedule-note">Запис на заняття — заздалегідь, кількість місць обмежена.</p>
+</div>
+
+<footer> <!-- футер (кінечний елемент-підпис сторінки) -->
+    <p>@ 2026 Студія йоги «Баланс»</p>
+</footer>
+
+</body>
+</html>

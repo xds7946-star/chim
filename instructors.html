@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Інструктори - Студія йоги «Баланс»</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> <!-- підключення іконок для сучасних браузерів -->
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> <!-- підключення іконок для старих браузерів -->
+</head>
+<body>
+
+<header>
+    <nav class="nav"> <!-- навігаційне меню -->
+        <a href="index.html"><ion-icon name="home-outline"></ion-icon> Головна</a>
+        <a href="about.html"><ion-icon name="color-filter-outline"></ion-icon>Про студію</a>
+        <a href="classes.html"><ion-icon name="accessibility-outline"></ion-icon> Заняття</a>
+        <a href="schedule.html"><ion-icon name="bar-chart-outline"></ion-icon> Розклад</a>
+        <a href="instructors.html" class="active"><ion-icon name="person-circle-outline"></ion-icon> Інструктори</a>
+        <a href="contacts.html"><ion-icon name="at-outline"></ion-icon> Контакти</a>
+    </nav>
+</header>
+
+<section class="instructors-hero">
+    <div class="instructors-hero__content">
+        <p class="instructors-hero__eyebrow">Команда</p>
+        <h1>Інструктори, які дбайливо ведуть до результату</h1>
+        <p>Ми обираємо наставників з глибокою практикою та увагою до людей. Кожне заняття — це безпека, підтримка і розвиток.</p>
+        <div class="instructors-hero__actions">
+            <a href="classes.html" class="btn primary"><ion-icon name="accessibility-outline"></ion-icon> Обрати заняття</a>
+            <a href="contacts.html" class="btn ghost"><ion-icon name="chatbubble-outline"></ion-icon> Запитати про тренера</a>
+        </div>
+    </div>
+</section>
+
+<div class="container"> <!-- основний контейнер вмісту сторінки -->
+    <div class="instructor-highlights">
+        <div class="highlight-card">
+            <ion-icon name="shield-checkmark-outline"></ion-icon>
+            <h3>Сертифікати</h3>
+            <p>Підтверджена кваліфікація та досвід.</p>
+        </div>
+        <div class="highlight-card">
+            <ion-icon name="people-outline"></ion-icon>
+            <h3>Малі групи</h3>
+            <p>Більше уваги кожному учаснику.</p>
+        </div>
+        <div class="highlight-card">
+            <ion-icon name="heart-outline"></ion-icon>
+            <h3>Дбайливий підхід</h3>
+            <p>Адаптація практик під ваш стан.</p>
+        </div>
+    </div>
+
+    <h2>Наші інструктори</h2>
+    <div class="team"> <!-- розділ з картками інструкторів -->
+        <div class="instructor-card"> <!-- картка інструктора -->
+            <img src="img/instructor1.jpg" alt="Інструктор Олена">
+            <h3>Олена</h3>
+            <p>Майстер хатха-йоги з 10-річним досвідом, допомагає досягти гармонії тіла і духу.</p>
+            <div class="instructor-meta">
+                <span>Хатха • Розтяжка</span>
+                <span>10+ років</span>
+            </div>
+        </div>
+        <div class="instructor-card"> <!-- картка інструктора -->
+            <img src="img/instructor3.jpg" alt="Інструктор Марія">
+            <h3>Марія</h3>
+            <p>Фітнес-йога та медитації, допомагає покращити гнучкість та концентрацію.</p>
+            <div class="instructor-meta">
+                <span>Віньяса • Медитація</span>
+                <span>8 років</span>
+            </div>
+        </div>
+        <div class="instructor-card"> <!-- картка інструктора -->
+            <img src="img/instructor2.jpg" alt="Інструктор Ігор">
+            <h3>Ігор</h3>
+            <p>Інструктор з йоги для початківців і людей з обмеженою рухливістю.</p>
+            <div class="instructor-meta">
+                <span>Базовий рівень</span>
+                <span>7 років</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="instructors-cta">
+        <h2>Хочете заняття з конкретним тренером?</h2>
+        <p>Напишіть нам — підберемо час і формат.</p>
+        <a href="contacts.html" class="btn">Записатися</a>
+    </section>
+</div>
+
+<footer>
+    <p>@ 2026 Студія йоги «Баланс»</p>
+</footer>
+
+</body>
+</html>

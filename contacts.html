@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Студія йоги «Баланс»</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> <!-- підключення іконок для сучасних браузерів -->
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> <!-- підключення іконок для старих браузерів -->
+    <meta name="color-scheme" content="light dark">
+</head>
+<body>
+
+<header>
+    <nav class="nav"> <!-- навігаційне меню -->
+        <a href="index.html"><ion-icon name="home-outline"></ion-icon> Головна</a>
+        <a href="about.html"><ion-icon name="color-filter-outline"></ion-icon>Про студію</a>
+        <a href="classes.html"><ion-icon name="accessibility-outline"></ion-icon> Заняття</a>
+        <a href="schedule.html"><ion-icon name="bar-chart-outline"></ion-icon> Розклад</a>
+        <a href="instructors.html"><ion-icon name="person-circle-outline"></ion-icon> Інструктори</a>
+        <a href="contacts.html" class="active"><ion-icon name="at-outline"></ion-icon> Контакти</a>
+    </nav>
+</header>
+
+<section class="contact-hero">
+    <div class="contact-hero__content">
+        <p class="contact-hero__eyebrow">Контакти</p>
+        <h1>Напишіть нам — ми на зв’язку</h1>
+        <p>Запитання, запис або консультація — відповімо швидко та підберемо зручний формат.</p>
+        <div class="contact-hero__actions">
+            <a href="tel:+380664257304" class="btn primary"><ion-icon name="call-outline"></ion-icon> Подзвонити</a>
+            <a href="mailto:balans.yoga@gmail.com" class="btn ghost"><ion-icon name="mail-outline"></ion-icon> Написати</a>
+        </div>
+    </div>
+</section>
+
+<div class="container"> <!-- основний контейнер вмісту сторінки -->
+    <div class="contact-grid">
+        <a class="contact-card contact-card--link" href="https://maps.google.com/?q=вул.+Шевченка+12,+Чернівці" target="_blank" rel="noopener">
+            <ion-icon name="location-outline"></ion-icon>
+            <h3>Адреса</h3>
+            <p>вул. Шевченка 12, м. Чернівці</p>
+        </a>
+        <a class="contact-card contact-card--link" href="tel:+380664257304">
+            <ion-icon name="call-outline"></ion-icon>
+            <h3>Телефон</h3>
+            <p>+380 66 425 73 04</p>
+        </a>
+        <a class="contact-card contact-card--link" href="https://instagram.com/balans.yoga" target="_blank" rel="noopener">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <h3>Instagram</h3>
+            <p>@balans.yoga</p>
+        </a>
+        <a class="contact-card contact-card--link" href="mailto:balans.yoga@gmail.com">
+            <ion-icon name="mail-outline"></ion-icon>
+            <h3>Email</h3>
+            <p>balans.yoga@gmail.com</p>
+        </a>
+    </div>
+
+    <section class="contact-form">
+        <h2>Залиште заявку</h2>
+        <p>Ми відповімо найближчим часом та підберемо зручний час.</p>
+        <form id="contactForm">
+            <div class="form-grid">
+                <label>
+                    Ім’я
+                    <input type="text" name="name" placeholder="Ваше ім’я" required>
+                </label>
+                <label>
+                    Телефон
+                    <input type="tel" name="phone" placeholder="+380 ..." required>
+                </label>
+            </div>
+            <label>
+                Повідомлення
+                <textarea name="message" rows="4" placeholder="Коротко опишіть запит" required></textarea>
+            </label>
+            <button type="submit" class="btn primary">Надіслати</button>
+            <p class="form-status" id="formStatus"></p>
+        </form>
+    </section>
+    
+    <h2>Ми на карті</h2>
+    <div class="map map-card">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2654.9487111808617!2d25.934224575281252!3d48.28460257126013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473408bdc7f57e5b%3A0xe50e8d90534203ee!2z0YPQuy4g0KjQtdCy0YfQtdC90LrQviwgMTIsINCn0LXRgNC90L7QstGG0YssINCn0LXRgNC90L7QstC40YbQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCwLCA1ODAwMA!5e0!3m2!1sru!2sus!4v1769626248549!5m2!1sru!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <section class="contact-cta">
+        <h2>Готові записатися?</h2>
+        <p>Напишіть або зателефонуйте — ми підберемо зручний час.</p>
+        <a href="schedule.html" class="btn">Переглянути розклад</a>
+    </section>
+</div>
+
+<footer>
+    <p>@ 2026 Студія йоги «Баланс»</p>
+</footer>
+
+<script>
+const form = document.getElementById('contactForm');
+const statusEl = document.getElementById('formStatus');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  statusEl.textContent = 'Надсилаємо...';
+
+  const formData = new FormData(form);
+  const payload = {
+    name: formData.get('name')?.trim(),
+    phone: formData.get('phone')?.trim(),
+    message: formData.get('message')?.trim()
+  };
+
+  try {
+    const res = await fetch('/api/telegram', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if (!res.ok || !data.ok) throw new Error('Request failed');
+
+    statusEl.textContent = 'Дякуємо! Повідомлення надіслано.';
+    form.reset();
+  } catch (err) {
+    statusEl.textContent = 'Помилка відправки. Спробуйте ще раз.';
+  }
+});
+</script>
+
+</body>
+</html>
